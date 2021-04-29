@@ -3,7 +3,6 @@ import React, { useContext, useEffect, useReducer } from 'react'
 
 import reducer from '../reducers/products_reducer'
 // import { products_url as url } from '../utils/constants'
-//import {single_product_url as single_url} from '../utils/constants'
  import { url1 as url} from '../utils/constants'
 
 import {
