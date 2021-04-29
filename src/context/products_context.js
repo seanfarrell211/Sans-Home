@@ -46,7 +46,9 @@ export const ProductsProvider = ({ children }) => {
     try {
     const response = await axios.get(url)
     const products = response.data
-    //const {response} = await axios.get('/api/complete-airtable');
+   // const {data} = await axios.get('/api/complete-airtable');
+   // console.log(data)
+    //console.log(data);
     //const products = response.data
     dispatch({type:GET_PRODUCTS_SUCCESS, payload: products })
   } catch(error) {
