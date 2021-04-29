@@ -44,7 +44,9 @@ export const ProductsProvider = ({ children }) => {
   const fetchProducts = async () => {
     dispatch({type: GET_PRODUCTS_BEGIN})
     try {
-    const response = await axios.get('/api/complete-airtable')
+    //const response = await axios.get(url)
+    //const products = response.data
+    const {response} = await axios.get('/api/complete-airtable');
     const products = response.data
     dispatch({type:GET_PRODUCTS_SUCCESS, payload: products })
   } catch(error) {
@@ -52,7 +54,7 @@ export const ProductsProvider = ({ children }) => {
     }
   }
   useEffect(() => {
-    fetchProducts(url)
+    fetchProducts()
   }, [])
   
   const fetchSingleProduct = async (url) => {
