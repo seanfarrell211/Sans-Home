@@ -41,10 +41,10 @@ export const ProductsProvider = ({ children }) => {
     dispatch({ type: SIDEBAR_CLOSE})
   }
 
-  const fetchProducts = async (url) => {
+  const fetchProducts = async () => {
     dispatch({type: GET_PRODUCTS_BEGIN})
     try {
-    const response = await axios.get(url)
+    const response = await axios.get('/api/complete-airtable')
     const products = response.data
     dispatch({type:GET_PRODUCTS_SUCCESS, payload: products })
   } catch(error) {
