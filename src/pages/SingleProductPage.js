@@ -2,8 +2,9 @@ import React, { useEffect } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import { useProductsContext } from '../context/products_context'
 // import axios from 'axios'
-import { single_product_url as url } from '../utils/constants'
+// import { single_product_url as url } from '../utils/constants'
 // import { url1 as url} from '../utils/constants'
+import { single_url as url } from '../utils/constants'
 import { formatPrice } from '../utils/helpers'
 import {
   Loading,
@@ -47,8 +48,11 @@ const SingleProductPage = () => {
     return <Error />
   }
 
-  const {name,price,description,stock,stars,reviews,id:sku
-  ,company,images,} = product
+ // const {name,price,description,stock,stars,reviews,id:sku
+ // ,company,images,} = product
+
+ const {name,price,description,stock,stars,reviews,id:sku
+   ,company,images,} = product
 
   return (<Wrapper>
     <PageHero title={name} product />
