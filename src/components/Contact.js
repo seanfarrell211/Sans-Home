@@ -7,11 +7,7 @@ const Contact = () => {
       <h3>Join our newsletter and get 20% off</h3>
       <div className='content'>
         <p>
-          lorem ipsum lskwkskkw
-          ekskw
-          veniam repduiang belabdi ,wqkelkwe
-          natus ipsam
-          vero?
+          Sign up and receive the latest news about exclusive offers, unique gift ideas, and personalized tips for shopping
         </p>
         <form className='contact-form' 
         action="https://formspree.io/f/xeqpbjqq" 

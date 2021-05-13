@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import { useProductsContext } from '../context/products_context'
 // import axios from 'axios'
-// import { single_product_url as url } from '../utils/constants'
+ // import { single_product_url as url } from '../utils/constants'
 // import { url1 as url} from '../utils/constants'
-import { single_url as url } from '../utils/constants'
+ import { single_url as url } from '../utils/constants'
 import { formatPrice } from '../utils/helpers'
 import {
   Loading,
@@ -18,7 +18,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 const SingleProductPage = () => {
-  const { id } = useParams()
+  const { id} = useParams()
   const history = useHistory()
   const { single_product_loading:loading,
   single_product_error:error,
@@ -30,7 +30,6 @@ const SingleProductPage = () => {
    fetchSingleProduct(`${url}${id}`)
    // eslint-disable-next-line
   }, [id])
-  console.log(product)
 
   useEffect(() => {
     if (error) {
@@ -48,13 +47,17 @@ const SingleProductPage = () => {
     return <Error />
   }
 
- // const {name,price,description,stock,stars,reviews,id:sku
- // ,company,images,} = product
-
- const {name,price,description,stock,stars,reviews,id:sku
-   ,company,images,} = product
-
-  return (<Wrapper>
+ // const test = Object.values(product);
+ // console.log(test)
+ // console.log(product["fields"])
+  // const {name, price,description,stock,stars,reviews,company,[images]} = product["fields"]
+  const {name,price,description,stock,stars,reviews,company,images,} = product
+// console.log(product["fields"].name)
+  const {id:sku} = product
+ // const {name,description} = product
+  console.log(product)
+  return (
+  <Wrapper>
     <PageHero title={name} product />
     <div className ='section section-center page'>
       <Link to='/products' className ='btn'>

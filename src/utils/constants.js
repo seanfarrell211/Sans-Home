@@ -29,21 +29,21 @@ export const services = [
     icon: <GiCompass />,
     title: 'mission',
     text:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+      'Sans Home mission is to provide a better everyday life for people and keeping the mission alive are their everyday employees',
   },
   {
     id: 2,
     icon: <GiDiamondHard />,
     title: 'vision',
     text:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+      'Sans Home vision is to create a better everyday life for the many people.'
   },
   {
     id: 3,
     icon: <GiStabbedNote />,
     title: 'history',
     text:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+      'We are the only home furnishings retailer on West Kalimantan list for past three years',
   },
 ]
 

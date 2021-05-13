@@ -12,7 +12,7 @@ const Hero = () => {
         comfort zone
       </h1>
       <p>
-        Loreim ipsum sit amer consecture adispicis elit.
+        Create artistic compositions with everyday objects.
       </p>
       <Link to='/products' className='btn hero-btn'>
         shop now

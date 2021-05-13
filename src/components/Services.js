@@ -11,13 +11,9 @@ const Services = () => {
             custom furniture <br/>
             built only for you
           </h3>
-          <p>
-            Loreim ipspumasdl;kasl;dksa
-            qowkepowkq
-            lqwke;kwq
-            wlwlkw
-            wkkwdkw?
-          </p>
+          {/* <p>
+            Our vision is to create a better everyday life for the many people
+          </p> */}
         </article>
         <div className='services-center'>
           {services.map((service) =>{
