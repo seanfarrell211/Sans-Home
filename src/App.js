@@ -9,7 +9,8 @@ import {Home,
   Error, 
   About, 
   Products, 
-  PrivateRoute, 
+  PrivateRoute,
+  IdeaPage, 
   Membership,
   AuthWrapper} from './pages'
 
@@ -34,6 +35,10 @@ function App() {
 
         <Route exact path ='/membership'>
           <Membership/>
+        </Route>
+
+        <Route exact path ='/idea'>
+          <IdeaPage/>
         </Route>
 
         <Route exact path ='/products'>

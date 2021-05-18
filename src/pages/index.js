@@ -8,6 +8,7 @@ import Checkout from './CheckoutPage'
 import PrivateRoute from './PrivateRoute'
 import Membership from './Membership'
 import AuthWrapper from './AuthWrapper'
+import IdeaPage from './IdeaPage'
 
 
 export {
@@ -18,6 +19,7 @@ export {
     Cart,
     Error, 
     Checkout,
-    Membership, 
+    Membership,
+    IdeaPage, 
     PrivateRoute,
     AuthWrapper}

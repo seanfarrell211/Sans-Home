@@ -42,7 +42,7 @@ const Membership = () => {
           id='birth'
           name='birthday'/>
           <br/>
-          <label className='agree'> I would like to receive news, tips and marketing offers from Sans Home.</label>
+          <label className='agree'> I would like to receive news, and marketing offers from Sans Home.</label>
         <input type="checkbox" 
         id="agree" 
         name="verification" 
@@ -106,7 +106,7 @@ const Wrapper = styled.section`
     float:right;
     position:absolute;
     top:34.2rem;
-    right:14rem;
+    right:13.3rem;
     color: darkred
    // padding-right: 10px;
   }
