@@ -15,7 +15,7 @@ const Sidebar = () => {
   return( <SidebarContainer>
     <aside className={`${isSidebarOpen? 'sidebar show-sidebar':'sidebar'}`}>
       <div className="sidebar-header">
-        <img src={logo} className="logo" alt="sans kitchen"/>
+        <img src={logo} className="logo" alt="sans home"/>
         <button className='close-btn' type='button' onClick={closeSidebar}>
           <FaTimes/>
         </button>
@@ -64,7 +64,8 @@ const SidebarContainer = styled.div`
   }
   .logo {
     justify-self: center;
-    height: 45px;
+    height: 225px;
+    margin-left: -98px;
   }
   .links {
     margin-bottom: 2rem;

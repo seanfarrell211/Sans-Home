@@ -21,6 +21,11 @@ export const links = [
     text: 'membership',
     url: '/membership',
   },
+  {
+    id: 5,
+    text: 'idea & inspiration',
+    url: '/idea',
+  },
 ]
 
 export const services = [

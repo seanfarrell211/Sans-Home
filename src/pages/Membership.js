@@ -105,7 +105,7 @@ const Wrapper = styled.section`
   .agree {
     float:right;
     position:absolute;
-    top:34.2rem;
+    top:34.5rem;
     right:13.3rem;
     color: darkred
    // padding-right: 10px;
