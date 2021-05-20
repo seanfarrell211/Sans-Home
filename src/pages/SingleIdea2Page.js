@@ -13,7 +13,7 @@ import {
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-const SingleIdeaPage = () => {
+const SingleIdea2Page = () => {
   const { id} = useParams()
   const history = useHistory()
   const { single_idea_loading:loading,
@@ -104,4 +104,4 @@ const Wrapper = styled.main`
   }
 `
 
-export default SingleIdeaPage
+export default SingleIdea2Page
