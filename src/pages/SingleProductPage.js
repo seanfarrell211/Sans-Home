@@ -54,7 +54,7 @@ const SingleProductPage = () => {
   const {name,price,description,stock,stars,reviews,company,images,} = product
 // console.log(product["fields"].name)
   const {id:sku} = product
-
+  console.log(product)
   return (
   <Wrapper>
     <PageHero title={name} product />

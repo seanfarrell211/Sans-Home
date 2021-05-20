@@ -3,7 +3,6 @@ import { useProductsContext } from '../context/products_context'
 import styled from 'styled-components'
 import Error from './Error'
 import Loading from './Loading'
-import Product from './Product'
 import SingleIdea from './SingleIdea'
 
 const Idea = () => {
@@ -16,7 +15,9 @@ const Idea = () => {
     return <Loading />  
   }
   if(error){
-    return <Error />
+      return(
+          <Error />
+      ) 
   }
   
   return (

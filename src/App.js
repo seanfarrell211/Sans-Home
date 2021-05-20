@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Navbar, Sidebar, Footer } from './components'
 
 import {Home, 
-  SingleProduct, 
+  SingleProduct,
+  SingleIdeaPage, 
   Cart, 
   Checkout, 
   Error, 
@@ -44,6 +45,9 @@ function App() {
         <Route exact path ='/products'>
           <Products/>
         </Route>
+
+        <Route exact path ="/idea/:id" children ={<SingleIdeaPage />}
+        />
 
         <Route exact path ="/products/:id" children ={<SingleProduct />}
         />

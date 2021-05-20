@@ -63,8 +63,21 @@ export const ProductsProvider = ({ children }) => {
       dispatch({type: GET_PRODUCTS_ERROR })
     }
   }
+
+  const fetchIdea = async (ideaurl) => {
+    dispatch({type: GET_IDEA_BEGIN})
+    try {
+    const response = await axios.get(ideaurl)
+    const idea = response.data
+    dispatch({type:GET_IDEA_SUCCESS, payload: idea })
+  } catch(error) {
+      dispatch({type: GET_IDEA_ERROR })
+    }
+  }
+
   useEffect(() => {
     fetchProducts(url)
+    fetchIdea(ideaurl)
   }, [])
   
   const fetchSingleProduct = async (url) => {
@@ -79,19 +92,6 @@ export const ProductsProvider = ({ children }) => {
   }
  
   // IDEA SECTION
-  const fetchIdea = async (ideaurl) => {
-    dispatch({type: GET_IDEA_BEGIN})
-    try {
-    const response = await axios.get(ideaurl)
-    const idea = response.data
-    dispatch({type:GET_IDEA_SUCCESS, payload: idea })
-  } catch(error) {
-      dispatch({type: GET_IDEA_ERROR })
-    }
-  }
-  useEffect(() => {
-    fetchIdea(ideaurl)
-  }, [])
   
   const fetchSingleIdea = async (ideaurl) => {
     dispatch({type: GET_SINGLE_IDEA_BEGIN})
@@ -103,8 +103,6 @@ export const ProductsProvider = ({ children }) => {
       dispatch({type:GET_SINGLE_IDEA_ERROR})
     }
   }
-
-
 
   return (
     <ProductsContext.Provider value={{...state,openSidebar,closeSidebar, fetchSingleProduct, fetchSingleIdea}}>

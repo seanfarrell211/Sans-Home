@@ -28,8 +28,8 @@ const products_reducer = (state, action) => {
   }
 
   if(action.type === GET_PRODUCTS_SUCCESS) {
-    const featured_products = action.payload.filter(
-      (products) => products.featured === true)
+    //const featured_products = action.payload.filter(
+    //  (products) => products.featured === true)
     return {...state, products_loading: false, products:action.payload, featured_products:action.payload,}
   }
 
@@ -55,8 +55,8 @@ const products_reducer = (state, action) => {
   }
 
   if(action.type === GET_IDEA_SUCCESS) {
-    const featured_idea = action.payload.filter(
-      (idea) => idea.featured === true)
+    //const featured_idea = action.payload.filter(
+     // (idea) => idea.featured === true)
     return {...state, idea_loading: false, idea:action.payload, featured_idea:action.payload,}
   }
 

@@ -1,9 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { PageHero, Idea } from '../components'
-
-//import { Filters, ProductList, Sort, PageHero } from '../components'
-
 const IdeaPage = () => {
   return( 
     <main>
