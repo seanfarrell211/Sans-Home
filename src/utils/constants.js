@@ -54,5 +54,7 @@ export const services = [
 
 export const url1 = 'https://temp-serverless-sans.netlify.app/api/3-z-complete'
 export const single_url = 'https://temp-serverless-sans.netlify.app/api/3-z-complete?id='
-export const products_url = 'https://course-api.com/react-store-products'
-export const single_product_url = `https://course-api.com/react-store-single-product?id=`
+//export const products_url = 'https://course-api.com/react-store-products'
+//export const single_product_url = `https://course-api.com/react-store-single-product?id=`
+export const idea_url= 'https://temp-serverless-sans.netlify.app/api/4-z-complete'
+export const single_idea_url = 'https://temp-serverless-sans.netlify.app/api/4-z-complete?id='

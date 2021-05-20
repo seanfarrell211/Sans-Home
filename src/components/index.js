@@ -17,6 +17,7 @@ import Stars from './Stars'
 import CartContent from './CarContent'
 import PageHero from './PageHero'
 import StripeCheckout from './StripeCheckout'
+import Idea from './Idea'
 
 export {
   FeaturedProducts,
@@ -37,5 +38,6 @@ export {
   Stars,
   CartContent,
   PageHero,
+  Idea,
   StripeCheckout,
 }

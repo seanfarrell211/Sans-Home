@@ -2,9 +2,8 @@ import axios from 'axios'
 import React, { useContext, useEffect, useReducer } from 'react'
 
 import reducer from '../reducers/products_reducer'
-// import { products_url as url } from '../utils/constants'
  import { url1 as url} from '../utils/constants'
- // import { single_product_url as url2} from '../utils/constants'
+ import { idea_url as ideaurl} from '../utils/constants'
 
 import {
   SIDEBAR_OPEN,
@@ -15,6 +14,12 @@ import {
   GET_SINGLE_PRODUCT_BEGIN,
   GET_SINGLE_PRODUCT_SUCCESS,
   GET_SINGLE_PRODUCT_ERROR,
+  GET_IDEA_BEGIN,
+  GET_IDEA_SUCCESS,
+  GET_IDEA_ERROR,
+  GET_SINGLE_IDEA_BEGIN,
+  GET_SINGLE_IDEA_SUCCESS,
+  GET_SINGLE_IDEA_ERROR,
 } from '../actions'
 
 const initialState = {
@@ -26,6 +31,13 @@ const initialState = {
   single_product_loading:false,
   single_product_error:false,
   single_product:{},
+  idea_loading:false,
+  idea_error:false,
+  idea:[],
+  featured_idea:[],
+  single_idea_loading:false,
+  single_idea_error:false,
+  single_idea:[],
 }
 
 const ProductsContext = React.createContext()
@@ -65,12 +77,37 @@ export const ProductsProvider = ({ children }) => {
       dispatch({type:GET_SINGLE_PRODUCT_ERROR})
     }
   }
-
+ 
+  // IDEA SECTION
+  const fetchIdea = async (ideaurl) => {
+    dispatch({type: GET_IDEA_BEGIN})
+    try {
+    const response = await axios.get(ideaurl)
+    const idea = response.data
+    dispatch({type:GET_IDEA_SUCCESS, payload: idea })
+  } catch(error) {
+      dispatch({type: GET_IDEA_ERROR })
+    }
+  }
+  useEffect(() => {
+    fetchIdea(ideaurl)
+  }, [])
+  
+  const fetchSingleIdea = async (ideaurl) => {
+    dispatch({type: GET_SINGLE_IDEA_BEGIN})
+    try {
+    const response = await axios.get(ideaurl)
+    const singleIdea = response.data
+    dispatch({type:GET_SINGLE_IDEA_SUCCESS,payload:singleIdea})
+  } catch(error) {
+      dispatch({type:GET_SINGLE_IDEA_ERROR})
+    }
+  }
 
 
 
   return (
-    <ProductsContext.Provider value={{...state,openSidebar,closeSidebar, fetchSingleProduct}}>
+    <ProductsContext.Provider value={{...state,openSidebar,closeSidebar, fetchSingleProduct, fetchSingleIdea}}>
       {children}
     </ProductsContext.Provider>
   )

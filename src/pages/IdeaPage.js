@@ -14,6 +14,7 @@ const IdeaPage = () => {
             <h2>Idea & Inspiration</h2>
             <div className='underline'></div>
           </div>
+          <div>
           <p>
           Find the inspiration, ideas, and products for 
           every corner of your life at home. 
@@ -21,8 +22,9 @@ const IdeaPage = () => {
           furniture to home décor are here, as well as furnishing knowledge 
           and décor inspiration to make your home truly yours.
           </p>
+          </div>
+          <Idea/>
         </article>
-      
       </Wrapper>
     </main>
     )
@@ -41,9 +43,10 @@ const IdeaPage = () => {
     p {
       line-height: 2;
       max-width: 45em;
-      margin: 0 auto;
-      margin-top: 2rem;
+      //margin: 0 auto;
+      margin-top: 1rem;
       color: var(--clr-grey-5);
+      text-align: justify;
     }
     .title {
       text-align: left;
