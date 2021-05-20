@@ -18,7 +18,7 @@ const SingleIdeaPage = () => {
   const history = useHistory()
   const { single_idea_loading:loading,
   single_idea_error:error,
-  single_idea:product,
+  single_idea:idea,
   fetchSingleIdea,
   } = useProductsContext()
 
@@ -44,8 +44,8 @@ const SingleIdeaPage = () => {
   }
 
 
-  const {name,decs1,desc2,header,images,} = product
-  const {id:sku} = product
+  const {name,decs1,desc2,header,images,} = idea
+  const {id:sku} = idea
 
   console.log(product)
   return (
@@ -59,23 +59,11 @@ const SingleIdeaPage = () => {
         <ProductImages images={images} />
         <section className ='content'>
           <h2>{name}</h2>
-          <Stars stars={stars} reviews={reviews}/>
-          <h5 className='price'> {formatPrice(price)}</h5>
-          <p className='desc'>{description}</p>
-          <p className="info">
-            <span>Available :</span>
-            {stock > 0 ? 'In stock':'out of stock'}
-          </p>
           <p className="info">
             <span>SKU :</span>
             {sku}
           </p>
-          <p className="info">
-            <span>Brand :</span>
-            {company}
-          </p>
           <hr />
-          {stock > 0 && <AddToCart product ={product}/>}
         </section>
       </div>
     </div>
