@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Error from './Error'
 import Loading from './Loading'
 import Product from './Product'
+import SingleIdea from './SingleIdea'
 
 const Idea = () => {
   const {
@@ -22,7 +23,7 @@ const Idea = () => {
   <Wrapper>
     <div className='section-center featured'>
       {featured.slice(0,6).map((idea) =>{
-        return <Product key={idea.id} {...idea} />
+        return <SingleIdea key={idea.id} {...idea} />
       })}
     </div>
     </Wrapper>
