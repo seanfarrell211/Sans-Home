@@ -117,4 +117,4 @@ const Wrapper = styled.main`
   }
 `
 
-export default SingleProductPage
+export default SingleIdeaPage
