@@ -4,10 +4,7 @@ import { useProductsContext } from '../context/products_context'
  import { single_idea_url as url } from '../utils/constants'
 import {
   Loading,
-  Error,
   ProductImages,
-  AddToCart,
-  Stars,
   PageHero,
 } from '../components'
 import styled from 'styled-components'
