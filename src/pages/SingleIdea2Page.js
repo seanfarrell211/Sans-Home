@@ -41,7 +41,8 @@ const SingleIdea2Page = () => {
   }
 
 
-  const {name,desc1,desc2,header,images,} = idea
+  const {name,desc1,desc2,desc3,header,header2,images,
+    nameprod1,uniqueid1,nameprod2,uniqueid2,} = idea
   //const {id:sku} = idea
 
   console.log(idea)
@@ -56,10 +57,20 @@ const SingleIdea2Page = () => {
         <ProductImages images={images} />
         <section className ='content'>
           <h2>{name}</h2>
-          <hr />
-          <h2>{desc1}</h2>
-          <h2>{desc2}</h2>
-          <h2>{header}</h2>
+          <div className='underline'></div>
+          <p className='desc'>{desc1}</p>
+
+          <h3 className='space'>{header}</h3>
+          <p className='desc'>{desc2}</p>
+
+          <h3 className='space'>{header2}</h3>
+          <p className='desc'>{desc3}</p>
+        <Link to={`/products/${uniqueid1}`} className ='btn'>
+          Check {nameprod1} 
+        </Link>
+        <Link to={`/products/${uniqueid2}`} className ='btn'>
+          Check {nameprod2} 
+        </Link>
         </section>
       </div>
     </div>
@@ -71,6 +82,9 @@ const Wrapper = styled.main`
   .product-center {
     display: grid;
     gap: 4rem;
+    margin-top: 2rem;
+  }
+  .space{
     margin-top: 2rem;
   }
   .price {
@@ -88,6 +102,17 @@ const Wrapper = styled.main`
     span {
       font-weight: 700;
     }
+  }
+  .underline {
+  width: 6rem;
+  height: 0.25rem;
+  background: #49a6e9;
+  background: var(--clr-primary-5);
+  margin-left: 0;
+  margin-right: auto;
+  }
+  .btn{
+    margin-right: 4px;
   }
 
   @media (min-width: 992px) {
